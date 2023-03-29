@@ -8,6 +8,7 @@ export const LogoWrapper = styled.div`
   border-style: none;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
