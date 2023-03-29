@@ -15,6 +15,10 @@ export const Button = styled.button`
   padding: 0;
   margin: 5px 5px;
   cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 
 export const PageNumber = styled.span`
