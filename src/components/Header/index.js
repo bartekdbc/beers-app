@@ -1,9 +1,10 @@
-import { LogoTitle, LogoWrapper } from "./styled";
+import { toBeerList } from "../../routes";
+import { LogoWrapper, StyledNavLink } from "./styled";
 
 const Header = () => {
   return (
     <LogoWrapper>
-      <LogoTitle>Beers</LogoTitle>
+      <StyledNavLink to={toBeerList()}>Beers</StyledNavLink>
     </LogoWrapper>
   );
 };

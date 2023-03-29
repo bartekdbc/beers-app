@@ -1,50 +1,26 @@
-import { useEffect, useState } from "react";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import BeerList from "./components/BeerList";
-import { APIUrl } from "./beersAPI";
-import { Container } from "./components/Container";
+import BeerPage from "./components/BeerPage";
 import Header from "./components/Header";
-import Loader from "./components/Loader";
-import Pagination from "./components/Pagination";
+import { toBeerList, toBeerPage } from "./routes";
 
-function App() {
-  const [beers, setBeers] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const getBeers = async () => {
-    setLoading(false);
-    const response = await fetch(APIUrl);
-    const data = await response.json();
-    setBeers(data);
-    console.log(data);
-  };
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(getBeers, 2000);
-  }, []);
-
+const App = () => {
   return (
-    <>
+    <HashRouter>
       <Header />
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Container>
-            {beers.map((beer) => (
-              <BeerList
-                key={beer.id}
-                image={beer.image_url}
-                name={beer.name}
-                tagline={beer.tagline}
-              />
-            ))}
-          </Container>
-          <Pagination />
-        </>
-      )}
-    </>
+      <Switch>
+        <Route path={toBeerPage()}>
+          <BeerPage />
+        </Route>
+        <Route>
+          <BeerList path={toBeerList()} />
+        </Route>
+        <Route>
+          <Redirect to={toBeerList()} />
+        </Route>
+      </Switch>
+    </HashRouter>
   );
-}
+};
 
 export default App;

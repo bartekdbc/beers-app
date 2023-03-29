@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const LogoWrapper = styled.div`
@@ -22,8 +23,12 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const LogoTitle = styled.h1`
-  margin: 0;
+export const StyledNavLink = styled(NavLink).attrs(() => ({
+  activeClassName: "active",
+}))`
+  text-decoration: none;
   color: #fc9f15;
   margin-top: 60px;
+  font-size: 36px;
+  font-weight: 600;
 `;
