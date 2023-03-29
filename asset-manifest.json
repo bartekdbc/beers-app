@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/beers-app/static/js/main.6a52a5ec.js",
+    "static/media/arrow.svg": "/beers-app/static/media/arrow.444a5e5cb7d38bca8099c9e90d433008.svg",
+    "index.html": "/beers-app/index.html",
+    "static/media/rhombus.svg": "/beers-app/static/media/rhombus.f309f50a4947bfb1d5d8f5e83d1f6796.svg",
+    "main.6a52a5ec.js.map": "/beers-app/static/js/main.6a52a5ec.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6a52a5ec.js"
+  ]
+}
