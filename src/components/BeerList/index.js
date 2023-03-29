@@ -3,35 +3,36 @@ import BeerTile from "../BeerTile";
 import { Container } from "../Container";
 import Loader from "../Loader";
 import Pagination from "../Pagination";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import ErrorPage from "../ErrorPage";
+import PausedPage from "../PausedPage";
+
+const perPage = 12;
+
+const getKey = (page) => [
+  "beers",
+  {
+    page,
+    per_page: perPage,
+  },
+];
 
 const BeerList = () => {
-  const [beers, setBeers] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-
-  const fetchData = async (currentPage) => {
-    setLoading(false);
-    const response = await fetch(
-      `https://api.punkapi.com/v2/beers?page=1&per_page=12`
-    );
-    const data = await response.json();
-    setBeers(data);
-    console.log(data);
-  };
+  const queryClient = useQueryClient();
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(fetchData, 2000);
-  }, [currentPage]);
+    queryClient.prefetchQuery(getKey(currentPage + 1));
+  }, [currentPage, queryClient]);
+
+  const { isLoading, isError, data, isPaused } = useQuery(getKey(currentPage));
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
+      {data ? (
         <>
           <Container>
-            {beers.map((beer) => (
+            {data.map((beer) => (
               <BeerTile
                 key={beer.id}
                 image={beer.image_url}
@@ -48,6 +49,14 @@ const BeerList = () => {
             setCurrentPage={setCurrentPage}
           />
         </>
+      ) : isPaused ? (
+        <PausedPage />
+      ) : isLoading ? (
+        <Loader />
+      ) : isError ? (
+        <ErrorPage />
+      ) : (
+        <></>
       )}
     </>
   );
