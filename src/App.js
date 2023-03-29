@@ -4,6 +4,7 @@ import { APIUrl } from "./beersAPI";
 import { Container } from "./components/Container";
 import Header from "./components/Header";
 import Loader from "./components/Loader";
+import Pagination from "./components/Pagination";
 
 function App() {
   const [beers, setBeers] = useState([]);
@@ -28,16 +29,19 @@ function App() {
       {loading ? (
         <Loader />
       ) : (
-        <Container>
-          {beers.map((beer) => (
-            <BeerList
-              key={beer.id}
-              image={beer.image_url}
-              name={beer.name}
-              tagline={beer.tagline}
-            />
-          ))}
-        </Container>
+        <>
+          <Container>
+            {beers.map((beer) => (
+              <BeerList
+                key={beer.id}
+                image={beer.image_url}
+                name={beer.name}
+                tagline={beer.tagline}
+              />
+            ))}
+          </Container>
+          <Pagination />
+        </>
       )}
     </>
   );
