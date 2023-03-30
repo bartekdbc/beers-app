@@ -3,7 +3,7 @@ import { Icon, Image, Info, Tagline, Title, Wrapper } from "./styled";
 const BeerTile = ({ image, name, tagline }) => {
   return (
     <Wrapper>
-      <Image src={image} alt="Beer Photo" />
+      <Image src={image} alt="Beer Pic" />
       <Info>
         <Title>{name}</Title>
         <Icon />

@@ -6,8 +6,15 @@ export const Wrapper = styled.div`
   padding: 20px 20px 5px 20px;
   margin: 20px;
   display: grid;
-  grid-template-rows: minmax(110px, 1fr) 1fr;
+  grid-template-rows: minmax(120px, 1fr) 1fr;
   justify-content: center;
+  padding: 16px;
+  box-shadow: rgba(186, 199, 213, 0.5) 0px 4px 12px;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Image = styled.img`
