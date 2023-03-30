@@ -6,6 +6,8 @@ import Pagination from "../Pagination";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import ErrorPage from "../ErrorPage";
 import PausedPage from "../PausedPage";
+import { TileLink } from "../TileLink";
+import { fetchBeers } from "../../beersAPI";
 
 const perPage = 12;
 
@@ -22,10 +24,13 @@ const BeerList = () => {
   const queryClient = useQueryClient();
 
   useEffect(() => {
-    queryClient.prefetchQuery(getKey(currentPage + 1));
+    queryClient.prefetchQuery(getKey(currentPage + 1), fetchBeers);
   }, [currentPage, queryClient]);
 
-  const { isLoading, isError, data, isPaused } = useQuery(getKey(currentPage));
+  const { isLoading, isError, data, isPaused } = useQuery(
+    getKey(currentPage),
+    fetchBeers
+  );
 
   return (
     <>
@@ -33,15 +38,17 @@ const BeerList = () => {
         <>
           <Container>
             {data.map((beer) => (
-              <BeerTile
-                key={beer.id}
-                image={beer.image_url}
-                name={beer.name}
-                tagline={beer.tagline}
-                description={beer.description}
-                abv={beer.abv}
-                ibu={beer.ibu}
-              />
+              <TileLink to={`/beers/details/${beer.id}`} key={beer.id}>
+                <BeerTile
+                  key={beer.id}
+                  image={beer.image_url}
+                  name={beer.name}
+                  tagline={beer.tagline}
+                  description={beer.description}
+                  abv={beer.abv}
+                  ibu={beer.ibu}
+                />
+              </TileLink>
             ))}
           </Container>
           <Pagination
