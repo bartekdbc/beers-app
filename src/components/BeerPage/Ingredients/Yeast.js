@@ -1,9 +1,9 @@
-import { IngredientList } from "./styled";
+import { IngredientItem, IngredientList } from "./styled";
 
 const Yeast = ({ yeast }) => {
   return (
     <IngredientList>
-      <li>{yeast}</li>
+      <IngredientItem>{yeast}</IngredientItem>
     </IngredientList>
   );
 };

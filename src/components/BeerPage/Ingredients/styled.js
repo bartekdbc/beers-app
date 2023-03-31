@@ -49,3 +49,7 @@ export const IngredientList = styled.ul`
     margin: 8px;
   }
 `;
+
+export const IngredientItem = styled.li`
+  margin-bottom: 8px;
+`;
