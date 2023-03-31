@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 800px;
   min-height: 100vh;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}px) {
+    margin: 0 20px;
+  }
 `;
 
 export const Details = styled.div`
