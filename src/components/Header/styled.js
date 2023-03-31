@@ -28,7 +28,14 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
 }))`
   text-decoration: none;
   color: #fc9f15;
-  margin-top: 60px;
+  margin-top: -40px;
   font-size: 36px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+`;
+
+export const BeerIcon = styled.img`
+  max-height: 60px;
+  padding: 2px;
 `;
