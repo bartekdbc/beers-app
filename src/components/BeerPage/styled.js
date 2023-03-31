@@ -48,6 +48,7 @@ export const Name = styled.h2`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 20px;
+    margin-top: 20px;
   }
 `;
 
