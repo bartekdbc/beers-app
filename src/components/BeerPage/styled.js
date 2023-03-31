@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 800px;
-  min-height: 100vh;
+  min-height: 105vh;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}px) {
     margin: 0 20px;
@@ -108,7 +108,7 @@ export const SmallInfo = styled.p`
 
 export const IngredientsWrapper = styled.div`
   padding: 20px 50px;
-  margin-top: 30px;
+  margin: 30px 0;
   box-shadow: rgba(186, 199, 213, 0.5) 0px 4px 12px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}px) {
