@@ -1,4 +1,4 @@
-import { toBeerList } from "../../routes";
+import { toBeerList } from "../../assets/routes";
 import { BeerIcon, LogoWrapper, StyledNavLink } from "./styled";
 
 const Header = () => {

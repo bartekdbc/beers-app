@@ -2,7 +2,7 @@ import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import BeerList from "./components/BeerList";
 import BeerPage from "./components/BeerPage";
 import Header from "./components/Header";
-import { toBeerList, toBeerPage } from "./routes";
+import { toBeerList, toBeerPage } from "./assets/routes";
 
 const App = () => {
   return (
