@@ -14,6 +14,15 @@ export const Details = styled.div`
   padding: 20px 50px;
   margin-top: 50px;
   box-shadow: rgba(186, 199, 213, 0.5) 0px 4px 12px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    padding: 20px 30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const Image = styled.img`
@@ -21,6 +30,11 @@ export const Image = styled.img`
   margin: auto;
   object-fit: cover;
   margin: 10px 40px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    max-height: 250px;
+    margin: 10px 30px 10px 0;
+  }
 `;
 
 export const Info = styled.div`
@@ -31,16 +45,29 @@ export const Info = styled.div`
 export const Name = styled.h2`
   margin: 0;
   color: ${({ theme }) => theme.color.black};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 20px;
+  }
 `;
 
 export const Tagline = styled.h3`
   margin: 18px 0 30px;
   font-style: italic;
   color: ${({ theme }) => theme.color.black};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Description = styled.p`
   max-width: 500px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 14px;
+  }
 `;
 
 export const DetailedInfo = styled.div`
@@ -56,14 +83,29 @@ export const DetailedInfoWrapper = styled.div`
 export const Strong = styled.span`
   font-weight: bold;
   color: ${({ theme }) => theme.color.black};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 16px;
+  }
 `;
 
 export const SmallInfo = styled.p`
   margin: 0 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 14px;
+  }
 `;
 
 export const IngredientsWrapper = styled.div`
   padding: 20px 50px;
   margin-top: 30px;
   box-shadow: rgba(186, 199, 213, 0.5) 0px 4px 12px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}px) {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;

@@ -9,7 +9,7 @@ export const theme = {
     violet: "#7f6ba0",
   },
   breakpoint: {
-    small: "480",
+    small: "550",
     medium: "782",
   },
 };
