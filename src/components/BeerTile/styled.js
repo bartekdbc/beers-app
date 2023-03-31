@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as Rhombus } from "./rhombus.svg";
 
 export const Wrapper = styled.div`
-  border: 1px solid #eae8e8;
+  border: 1px solid ${({ theme }) => theme.color.mercury};
   padding: 20px 20px 5px 20px;
   margin: 20px;
   display: grid;
@@ -34,17 +34,17 @@ export const Info = styled.div`
 
 export const Title = styled.h2`
   font-size: 14px;
-  color: #9a9a9a;
+  color: ${({ theme }) => theme.color.gray};
   margin: 0;
   padding: 10px;
 `;
 
 export const Tagline = styled.h3`
   font-size: 12px;
-  color: #9a9a9a;
+  color: ${({ theme }) => theme.color.gray};
   margin: 0;
   padding: 10px 0;
-  border-top: 1px solid #eae8e8;
+  border-top: 1px solid ${({ theme }) => theme.color.mercury};
 `;
 
 export const Icon = styled(Rhombus)`

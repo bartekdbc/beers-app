@@ -10,7 +10,7 @@ export const Details = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #eae8e8;
+  border: 1px solid ${({ theme }) => theme.color.mercury};
   padding: 20px 50px;
   margin-top: 50px;
   box-shadow: rgba(186, 199, 213, 0.5) 0px 4px 12px;
@@ -30,13 +30,13 @@ export const Info = styled.div`
 
 export const Name = styled.h2`
   margin: 0;
-  color: black;
+  color: ${({ theme }) => theme.color.black};
 `;
 
 export const Tagline = styled.h3`
   margin: 18px 0 30px;
   font-style: italic;
-  color: black;
+  color: ${({ theme }) => theme.color.black};
 `;
 
 export const Description = styled.p`
@@ -55,7 +55,7 @@ export const DetailedInfoWrapper = styled.div`
 
 export const Strong = styled.span`
   font-weight: bold;
-  color: black;
+  color: ${({ theme }) => theme.color.black};
 `;
 
 export const SmallInfo = styled.p`

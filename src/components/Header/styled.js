@@ -18,7 +18,7 @@ export const LogoWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 12vh;
-    background: white;
+    background: ${({ theme }) => theme.color.white};
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
   }
 `;
@@ -27,7 +27,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
   activeClassName: "active",
 }))`
   text-decoration: none;
-  color: #fc9f15;
+  color: ${({ theme }) => theme.color.orange};
   margin-top: -40px;
   font-size: 36px;
   font-weight: 600;

@@ -5,7 +5,7 @@ import { ReactComponent as Error } from "./error.svg";
 export const Wrapper = styled.div`
   margin-top: 80px;
   text-align: center;
-  color: #9a9a9a;
+  color: ${({ theme }) => theme.color.gray};
 `;
 
 export const ErrorIcon = styled(Error)`
@@ -22,8 +22,8 @@ export const ErrorText = styled.h2`
 `;
 
 export const ButtonLink = styled(Link)`
-  color: white;
-  background-color: #7f6ba0;
+  color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) => theme.color.violet};
   text-decoration: none;
   display: inline-block;
   font-size: 14px;

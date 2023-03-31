@@ -4,6 +4,8 @@ import App from "./App";
 import { GlobalStyle } from "./assets/GlobalStyle";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./assets/theme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,8 +20,10 @@ const queryClient = new QueryClient({
 
 root.render(
   <QueryClientProvider client={queryClient}>
-    <ReactQueryDevtools />
-    <GlobalStyle />
-    <App />
+    <ThemeProvider theme={theme}>
+      <ReactQueryDevtools />
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
   </QueryClientProvider>
 );

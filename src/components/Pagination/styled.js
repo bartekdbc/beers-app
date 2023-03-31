@@ -22,11 +22,11 @@ export const Button = styled.button`
 `;
 
 export const PageNumber = styled.span`
-  background-color: #fc9f15;
+  background-color: ${({ theme }) => theme.color.orange};
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
 `;
 
 export const BackwardArrow = styled(Arrow)`

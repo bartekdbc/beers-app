@@ -10,9 +10,9 @@ export const Spinner = styled.div`
   margin: 120px auto 24px;
   width: 91px;
   height: 91px;
-  border: 11px solid #ddddee;
+  border: 11px solid ${({ theme }) => theme.color.snuff};
   border-radius: 50%;
-  border-right-color: #7f6ba0;
+  border-right-color: ${({ theme }) => theme.color.violet};
   animation: spin 1.2s linear infinite;
 
   @keyframes spin {
