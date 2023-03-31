@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Image = styled.img`
@@ -22,6 +26,10 @@ export const Image = styled.img`
   min-height: 100px;
   margin: auto;
   object-fit: cover;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    min-height: 120px;
+  }
 `;
 
 export const Info = styled.div`
@@ -37,6 +45,10 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.color.gray};
   margin: 0;
   padding: 10px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 18px;
+  }
 `;
 
 export const Tagline = styled.h3`
@@ -45,6 +57,10 @@ export const Tagline = styled.h3`
   margin: 0;
   padding: 10px 0;
   border-top: 1px solid ${({ theme }) => theme.color.mercury};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 16px;
+  }
 `;
 
 export const Icon = styled(Rhombus)`

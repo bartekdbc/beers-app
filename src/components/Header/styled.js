@@ -33,6 +33,10 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
   font-weight: 600;
   display: flex;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    margin-top: -60px;
+  }
 `;
 
 export const BeerIcon = styled.img`

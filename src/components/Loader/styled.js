@@ -20,4 +20,11 @@ export const Spinner = styled.div`
       transform: rotate(360deg);
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    margin: 24px auto 24px;
+    height: 35px;
+    width: 35px;
+    border-width: 4px;
+  }
 `;
