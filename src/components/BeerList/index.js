@@ -7,7 +7,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import ErrorPage from "../ErrorPage";
 import PausedPage from "../PausedPage";
 import { TileLink } from "../TileLink";
-import { fetchBeers } from "../../beersAPI";
+import { fetchBeers } from "../../api/beersAPI";
 
 const perPage = 12;
 

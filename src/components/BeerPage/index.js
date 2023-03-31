@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
-import { fetchBeerDetails } from "../../beersAPI";
+import { fetchBeerDetails } from "../../api/beersAPI";
 import ErrorPage from "../ErrorPage";
 import Loader from "../Loader";
 import PausedPage from "../PausedPage";
