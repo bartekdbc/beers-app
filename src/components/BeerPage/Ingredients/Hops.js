@@ -7,6 +7,7 @@ const Hops = ({ hops }) => {
       {hops.map((hopsItem) => (
         <li key={nanoid()}>
           {hopsItem.name}: {hopsItem.amount.value} {hopsItem.amount.unit}
+          &nbsp;(add: {hopsItem.add}/ attribute: {hopsItem.attribute})
         </li>
       ))}
     </IngredientList>
