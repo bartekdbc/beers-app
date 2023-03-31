@@ -25,6 +25,7 @@ const BeerList = () => {
 
   useEffect(() => {
     queryClient.prefetchQuery(getKey(currentPage + 1), fetchBeers);
+    window.scrollTo(0, 0);
   }, [currentPage, queryClient]);
 
   const { isLoading, isError, data, isPaused } = useQuery(
