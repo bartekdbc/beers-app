@@ -35,6 +35,10 @@ export const Image = styled.img`
     max-height: 250px;
     margin: 10px 30px 10px 0;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}px) {
+    margin: 10px 0px;
+  }
 `;
 
 export const Info = styled.div`
