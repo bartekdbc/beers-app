@@ -2,7 +2,7 @@
 
 ## General information
 
-Beers App is a simple project made in Tanstack Query presenting some information about different kind of beers. Data is fetched from the external API, so every time user changes something on the page, the data updates itself. The App includes two main blocks:
+Beers App is a simple project made in Tanstack React Query presenting some information about different kind of beers. Data is fetched from the external API, so every time user changes something on the page, the data updates itself. The App includes two main blocks:
 
 - **Beer List** with pagination,
 - **Beer Subpage** for every single beer in database.
