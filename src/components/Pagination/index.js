@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import {
   BackwardArrow,
   Button,
@@ -9,13 +10,18 @@ import {
 const Pagination = ({ currentPage, setCurrentPage }) => {
   const backwardButtonDisabled = currentPage === 1;
   const forwardButtonDisabled = currentPage === 28;
+  const history = useHistory();
 
   const handlePrevPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
+    const updatedPage = currentPage - 1;
+    setCurrentPage(updatedPage);
+    history.push(`/beers/${updatedPage}`);
   };
 
   const handleNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+    const updatedPage = currentPage + 1;
+    setCurrentPage(updatedPage);
+    history.push(`/beers/${updatedPage}`);
   };
 
   return (
